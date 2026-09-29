@@ -2,7 +2,7 @@
 
 *Première version à relire (29/09/2026). Affichée sur la page d'accueil de l'application, avec cases à cocher et progression. Chaque étape a un identifiant (`P1-01`…) pour être reprise telle quelle dans l'application.*
 
-**Règle de séquence :** les phases 1, 2 et 3 peuvent avancer en parallèle, mais **aucune facturation réelle pour une cliente (phase 6) avant d'avoir terminé la porte de sécurité** (étapes marquées 🔒 en phase 4).
+**Règle de séquence :** les phases 1, 2 et 3 peuvent avancer en parallèle, mais **aucune facturation réelle pour une cliente (phase 6) avant d'avoir validé les prérequis obligatoires** (étapes marquées 🔒 en phase 4).
 
 ---
 
@@ -39,7 +39,7 @@
 
 *Fin de phase : dérouler seule un cycle complet sur cas fictifs.*
 
-## Phase 4 — Structurer la société (🔒 porte de sécurité)
+## Phase 4 — Structurer la société (🔒 prérequis obligatoires)
 - [ ] **P4-01** Prendre rendez-vous CCI ou comptable et confirmer le statut (piste : micro-entreprise)
 - [ ] **P4-02** Vérifier plafonds, franchise de TVA, code APE, CFE
 - [ ] **P4-03** Créer l'activité (guichet unique)
@@ -68,7 +68,7 @@
 - [ ] **P6-05** Contacter cabinets et syndicats du Jura et du Doubs
 - [ ] **P6-06** Signer 1 à 3 clientes tests, à tarif réduit
 
-*Fin de phase : au moins une cliente prête à démarrer (porte de sécurité franchie).*
+*Fin de phase : au moins une cliente prête à démarrer (prérequis obligatoires validés).*
 
 ## Phase 7 — Démarrer et rôder
 - [ ] **P7-01** Démarrer avec peu de cabinets et sécuriser les procédures (contrôle des ordonnances, règles de cumul, relances)

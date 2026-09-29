@@ -1,4 +1,5 @@
 # Sauvegardes exportées depuis l'application (données personnelles de progression)
+facturiere-sauvegarde-*.json
 bordereau-sauvegarde-*.json
 Thumbs.db
 .DS_Store

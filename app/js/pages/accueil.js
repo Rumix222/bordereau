@@ -1,15 +1,6 @@
 import { db } from '../db.js';
 import { loadJSON, esc } from '../util.js';
 
-const PAGES = [
-  { href: '#/societe', titre: 'Ma société', desc: 'Statut, formalités, assurances, contrats, données' },
-  { href: '#/metier', titre: 'Le métier', desc: 'NGAP, BSI, télétransmission, rejets' },
-  { href: '#/clientes', titre: 'Trouver des clientes', desc: 'Réseau, offre, tarification' },
-  { href: '#/simulateur', titre: 'Simulateur', desc: 'S\'entraîner sur des cas fictifs' },
-  { href: '#/quiz', titre: 'Quiz', desc: 'Vérifier ses connaissances' },
-  { href: '#/metier/glossaire', titre: 'Glossaire', desc: 'Tous les termes et sigles' },
-];
-
 function computeState(roadmap, done) {
   const verrous = roadmap.phases.flatMap((p) => p.etapes.filter((e) => e.verrou));
   const porteOuverte = verrous.every((e) => done.has(e.id));
@@ -32,12 +23,7 @@ export default async function accueil(el) {
     const pct = Math.round((nbDone / total) * 100);
 
     el.innerHTML = `
-      <h1>Bonjour 👋</h1>
-      <div class="tiles">
-        ${PAGES.map((p) => `<a class="tile" href="${p.href}"><strong>${p.titre}</strong><span>${p.desc}</span></a>`).join('')}
-      </div>
-
-      <h2>Feuille de route de démarrage</h2>
+      <h1>Feuille de route</h1>
       <div class="card">
         <div class="progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><div style="width:${pct}%"></div></div>
         <div class="progress-label"><span>${nbDone} / ${total} étapes</span><span>${pct} %</span></div>
@@ -46,9 +32,9 @@ export default async function accueil(el) {
           : '<p class="notice ok">Toutes les étapes sont cochées. Bravo !</p>'}
       </div>
       <div class="notice ${porteOuverte ? 'ok' : ''}">
-        🔒 <strong>Porte de sécurité :</strong> ${porteOuverte
-          ? 'franchie. Les phases 6 et 7 sont ouvertes.'
-          : `${verrous.filter((e) => done.has(e.id)).length} / ${verrous.length} étapes. Aucune facturation réelle pour une cliente avant de l'avoir franchie (assurance RC Pro, contrats, RGPD, accès CPS).`}
+        🔒 <strong>Prérequis obligatoires :</strong> ${porteOuverte
+          ? 'validés. Les phases 6 et 7 sont ouvertes.'
+          : `${verrous.filter((e) => done.has(e.id)).length} / ${verrous.length} étapes. Aucune facturation réelle pour une cliente avant de les avoir validés (assurance RC Pro, contrats, RGPD, accès CPS).`}
       </div>
 
       ${roadmap.phases.map((p, idx) => {
@@ -59,14 +45,13 @@ export default async function accueil(el) {
         <details class="phase ${locked ? 'locked' : ''}" data-phase="${p.id}" ${isOpen ? 'open' : ''}>
           <summary>
             <div class="row"><strong>${idx + 1}. ${esc(p.titre)}</strong><span class="badge ${n === p.etapes.length ? 'ok' : ''}">${n}/${p.etapes.length}</span></div>
-            ${locked ? '<span class="small muted">🔒 Bloquée tant que la porte de sécurité n\'est pas franchie</span>' : ''}
+            ${locked ? '<span class="small muted">🔒 Bloquée tant que les prérequis obligatoires ne sont pas validés</span>' : ''}
           </summary>
           <div class="body">
             ${p.etapes.map((e) => `
               <div class="step ${done.has(e.id) ? 'done' : ''}">
                 <input type="checkbox" id="cb-${e.id}" data-step="${e.id}" ${done.has(e.id) ? 'checked' : ''} ${locked ? 'disabled' : ''}>
                 <label for="cb-${e.id}"><span class="id">${e.id}${e.verrou ? ' 🔒' : ''}</span><br><span class="txt">${esc(e.texte)}</span></label>
-                ${e.lien ? `<a class="go" href="${e.lien}">Voir ›</a>` : ''}
               </div>`).join('')}
             ${p.fin ? `<p class="phase-end">Fin de phase : ${esc(p.fin)}</p>` : ''}
           </div>
@@ -105,7 +90,7 @@ export default async function accueil(el) {
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `bordereau-sauvegarde-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `facturiere-sauvegarde-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }

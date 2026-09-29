@@ -3,7 +3,7 @@
 // pour que les mises à jour des règles arrivent dès qu'il y a du réseau.
 // Incrémenter VERSION à chaque déploiement qui modifie le code.
 
-const VERSION = 'bordereau-v1';
+const VERSION = 'facturiere-v2';
 const SHELL = [
   './',
   'index.html',

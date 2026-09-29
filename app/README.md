@@ -1,4 +1,4 @@
-# Application Bordereau
+# Application Facturière
 
 Application web installable (PWA) d'apprentissage pour débuter comme facturière IDEL. Sans étape de compilation : HTML, CSS et JavaScript simples.
 
@@ -17,7 +17,7 @@ Après une modification du **code** (HTML/CSS/JS), incrémenter `VERSION` dans `
 | Fichier | Contenu |
 |---|---|
 | `content/societe.md`, `metier.md`, `clientes.md` | Texte des pages (Markdown simple ; `[à vérifier]` est mis en évidence) |
-| `data/feuille-de-route.json` | Étapes de la feuille de route (`verrou: true` = porte de sécurité) |
+| `data/feuille-de-route.json` | Étapes de la feuille de route (`verrou: true` = prérequis obligatoire) |
 | `data/glossaire.json` | Termes du glossaire (`verifie` : date de vérification ou `null`) |
 | `data/quiz.json` | Questions (`bonne` = index de la bonne réponse, `casSimu` = cas lié) |
 | `data/simulateur.json` | Catalogue d'actes, majorations et cas pratiques (`attendu` = solution) |

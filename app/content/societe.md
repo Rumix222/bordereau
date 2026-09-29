@@ -33,7 +33,7 @@ Une erreur de cotation peut entraîner des **rejets**, des **indus** (sommes que
 
 - Contrat : périmètre exact de la mission, **obligation de moyens**, contrôle des pièces justificatives, ce qui reste sous la responsabilité de l'infirmière (le soin, la prescription, la signature)
 - Assurance **RC Pro** adaptée à l'activité **[à chiffrer]**
-- 🔒 Étape de la porte de sécurité : aucune facturation réelle sans assurance souscrite
+- 🔒 Prérequis obligatoire : aucune facturation réelle sans assurance souscrite
 
 ## Contrats
 
@@ -45,7 +45,7 @@ Trois documents à préparer, idéalement relus par un juriste :
 | Contrat de prestation | Mission, responsabilités, confidentialité, sous-traitance RGPD |
 | Mandat de facturation | Autorise la facturière à agir pour le compte de l'infirmière dans son logiciel |
 
-🔒 Étape de la porte de sécurité.
+🔒 Prérequis obligatoire.
 
 ## Données patients, CPS et accès distant
 
@@ -64,13 +64,13 @@ Trois documents à préparer, idéalement relus par un juriste :
 - Vérifier les conditions d'utilisation de chaque éditeur (accès tiers, identifiants)
 - À clarifier avec une infirmière et les éditeurs
 
-🔒 Étapes de la porte de sécurité.
+🔒 Prérequis obligatoires.
 
 ## Décisions déjà prises
 
 | Décision | Remarque |
 |---|---|
-| Marque : **Bordereau** | |
+| Application : **Facturière** | |
 | Zone : Jura et Doubs | Extension possible plus tard |
 | Travail **dans le logiciel de chaque infirmière, à distance** | Conditions éditeurs et CPS à cadrer |
 | Statut : piste micro-entreprise | À valider CCI / comptable |

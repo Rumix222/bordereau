@@ -2,7 +2,7 @@
   "version": "2026-09-29",
   "nom": "SimuSoins",
   "avertissement": "Maquette pédagogique générique : elle ne reproduit l'interface d'aucun logiciel commercial. Catalogue d'actes simplifié et non opposable, cotations [à vérifier] sur la NGAP en vigueur. Tous les patients et praticiens sont fictifs.",
-  "source": "NGAP (Ameli), catalogue pédagogique Bordereau",
+  "source": "NGAP (Ameli), catalogue pédagogique Facturière",
   "verifie": null,
   "actes": [
     { "id": "INJ", "libelle": "Injection intramusculaire ou sous-cutanée", "lettre": "AMI", "coef": 1 },

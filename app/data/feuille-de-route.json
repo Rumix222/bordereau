@@ -1,7 +1,7 @@
 {
   "version": "2026-09-29",
   "statut": "Version du 29/09/2026",
-  "regle": "Les phases 1, 2 et 3 peuvent avancer en parallèle, mais aucune facturation réelle pour une cliente avant d'avoir franchi la porte de sécurité (étapes 🔒).",
+  "regle": "Les phases 1, 2 et 3 peuvent avancer en parallèle, mais aucune facturation réelle pour une cliente avant d'avoir validé les prérequis obligatoires (étapes 🔒).",
   "phases": [
     {
       "id": "P1",
@@ -75,7 +75,7 @@
     {
       "id": "P6",
       "titre": "Visibilité et premières clientes",
-      "fin": "Au moins une cliente prête à démarrer (porte de sécurité franchie).",
+      "fin": "Au moins une cliente prête à démarrer (prérequis obligatoires validés).",
       "exigeVerrous": true,
       "etapes": [
         { "id": "P6-01", "texte": "Site : choisir et acheter le domaine, choisir l'hébergement (OVH Starter ou o2switch), publier" },

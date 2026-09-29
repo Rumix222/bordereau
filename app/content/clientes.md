@@ -8,7 +8,7 @@
 - **Démarrer petit** : quelques cabinets au début, pour sécuriser les procédures (contrôle des ordonnances, règles de cumul, relances), puis élargir sans dégrader qualité ni confidentialité
 - **Clientes tests** à tarif réduit pour rôder les process
 - Prospection locale Jura / Doubs : cabinets infirmiers, syndicats (SNIIL, FNI, Convergence Infirmière), bouche-à-oreille
-- Visibilité : site Bordereau et fiche Google Business Profile
+- Visibilité : site vitrine et fiche Google Business Profile
 
 ## Fidéliser
 
