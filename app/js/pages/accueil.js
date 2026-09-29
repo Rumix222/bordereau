@@ -27,9 +27,8 @@ export default async function accueil(el) {
       <div class="card">
         <div class="progress" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><div style="width:${pct}%"></div></div>
         <div class="progress-label"><span>${nbDone} / ${total} étapes</span><span>${pct} %</span></div>
-        ${next ? `<p><strong>Prochaine étape</strong> <span class="badge">${esc(next.id)}</span><br>${esc(next.texte)}</p>
-          ${next.lien ? `<a class="btn small secondary" href="${next.lien}">Ouvrir la page liée</a>` : ''}`
-          : '<p class="notice ok">Toutes les étapes sont cochées. Bravo !</p>'}
+        ${next ? `<p><strong>Prochaine étape</strong> <span class="badge">${esc(next.id)}</span><br>${esc(next.texte)}</p>`
+          :'<p class="notice ok">Toutes les étapes sont cochées. Bravo !</p>'}
       </div>
       <div class="notice ${porteOuverte ? 'ok' : ''}">
         🔒 <strong>Prérequis obligatoires :</strong> ${porteOuverte
