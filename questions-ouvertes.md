@@ -1,7 +1,7 @@
 # Questions ouvertes
 
 ## Priorité 1 — bloquantes
-1. **Accès distant et CPS** : que permettent les conditions d'utilisation de chaque éditeur (accès tiers, partage d'identifiants) ? Comment gérer la carte CPS, strictement personnelle ? Quel mode de travail conforme proposer ?
+1. **Accès distant et CPS** *(piste rédigée dans l'application, à vérifier auprès des éditeurs)* : que permettent les conditions d'utilisation de chaque éditeur (accès tiers, partage d'identifiants) ? Comment gérer la carte CPS, strictement personnelle ? Quel mode de travail conforme proposer ?
 2. **Responsabilité** : que prévoit le contrat en cas d'erreur de cotation ou de rejet ? Quelle assurance RC Pro ?
 3. **Données patients** : contrat de sous-traitance RGPD type, hébergement (HDS côté éditeur), conservation, confidentialité.
 
@@ -12,7 +12,7 @@
 7. **Logiciel d'apprentissage** : Albus ou autre ? Existe-t-il une démo ou un essai accessible à une non-professionnelle de santé ?
 
 ## Priorité 3
-8. **Clôture** : préciser ce que recouvre le terme (clôture mensuelle de facturation ? de télétransmission ?) et son calendrier.
+8. **Clôture** *(définition provisoire rédigée dans l'application, à confirmer)* : préciser ce que recouvre le terme (clôture mensuelle de facturation ? de télétransmission ?) et son calendrier.
 9. **Communication** : la réglementation de communication des IDEL s'applique-t-elle à un facturier indépendant ?
 10. **Extension** : autres professions (kinés…), services administratifs élargis.
 11. ~~Espace information de l'accueil~~ → tranché le 29/09/2026 : affiche la feuille de route (voir `decisions.md`).

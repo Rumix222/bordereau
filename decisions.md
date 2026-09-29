@@ -17,3 +17,4 @@
 | 2026-09-29 | Données de l'app stockées **sur l'appareil** (base IndexedDB) : progression, scores du quiz, essais du simulateur | Sauvegarde/restauration par fichier ; schéma versionné pour évoluer. Base en ligne à envisager seulement si besoin de synchroniser plusieurs appareils |
 | 2026-09-29 | Simulateur nommé **SimuSoins** (nom générique) | Ne copie ni l'interface ni le nom d'un logiciel commercial |
 | 2026-09-29 | Application renommée **Facturière** ; « porte de sécurité » devient **prérequis obligatoires** | Accueil : feuille de route directe, navigation par la barre du bas |
+| 2026-09-29 | Phase « Cadrer les points bloquants » supprimée de la feuille de route ; pistes de réponse intégrées aux pages Métier et Société | Sauvegarde/restauration par fichier désactivée (code conservé) |

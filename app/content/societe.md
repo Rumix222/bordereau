@@ -60,9 +60,10 @@ Trois documents à préparer, idéalement relus par un juriste :
 **Carte CPS et accès distant**
 
 - La carte CPS est **strictement personnelle** : elle ne se partage pas
-- Définir avec chaque cliente un mode de travail conforme
-- Vérifier les conditions d'utilisation de chaque éditeur (accès tiers, identifiants)
-- À clarifier avec une infirmière et les éditeurs
+- Piste de travail : la facturière **prépare** la facturation (saisie, contrôle des ordonnances et des cotations, suivi des rejets) dans le logiciel de l'infirmière, et c'est **l'infirmière qui signe et télétransmet** avec sa propre CPS **[à vérifier]**
+- Autre option : l'infirmière valide elle-même chaque connexion ou envoi (application e-CPS sur son téléphone) **[à vérifier : selon les éditeurs]**
+- Jamais de CPS ni de code confiés, jamais de connexion sous l'identité de l'infirmière
+- Ce qui reste à vérifier : les conditions d'utilisation de chaque éditeur (accès tiers, comptes secondaires) et ce que la convention et la CPAM acceptent en matière de délégation
 
 🔒 Prérequis obligatoires.
 

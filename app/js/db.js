@@ -5,7 +5,7 @@
 // dans MIGRATIONS (ne jamais modifier une étape existante).
 
 const DB_NAME = 'bordereau';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 const MIGRATIONS = {
   1(db) {
@@ -20,6 +20,18 @@ const MIGRATIONS = {
     // Essais du simulateur : { id auto, casId, score, resultat, saisie, at }
     const sim = db.createObjectStore('simAttempts', { keyPath: 'id', autoIncrement: true });
     sim.createIndex('casId', 'casId');
+  },
+  // La phase « Cadrer les points bloquants » a été retirée : les étapes P2… → P1…, etc.
+  2(db, tx) {
+    const store = tx.objectStore('roadmap');
+    store.getAll().onsuccess = (e) => {
+      store.clear();
+      for (const r of e.target.result) {
+        const m = /^P([1-7])-(\d\d)$/.exec(r.id);
+        if (!m || m[1] === '1') continue;
+        store.put({ ...r, id: `P${Number(m[1]) - 1}-${m[2]}` });
+      }
+    };
   },
 };
 

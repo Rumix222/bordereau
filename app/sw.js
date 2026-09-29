@@ -3,7 +3,7 @@
 // pour que les mises à jour des règles arrivent dès qu'il y a du réseau.
 // Incrémenter VERSION à chaque déploiement qui modifie le code.
 
-const VERSION = 'facturiere-v3';
+const VERSION = 'facturiere-v4';
 const SHELL = [
   './',
   'index.html',

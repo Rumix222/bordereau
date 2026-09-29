@@ -120,7 +120,7 @@ Trois grandes familles de causes :
 - **Collecte des pièces** : ordonnances, attestations, bilans BSI
 - **Classement** et suivi des paiements, **relances**
 - **Rythme** : facturer tous les 15 jours est conseillé aux IDEL pour lisser leurs revenus sans être débordé ; certains logiciels permettent d'anticiper des facturations
-- **Clôture** : ce que recouvre ce terme reste à préciser avec une infirmière (clôture mensuelle ? de télétransmission ?)
+- **Clôture** : opération de fin de période dans le logiciel (quinzaine ou mois selon l'infirmière) qui fige les feuilles de soins saisies et prépare les lots à télétransmettre ; le libellé et le calendrier exacts varient selon le logiciel **[à vérifier]**
 
 ## Les logiciels
 
@@ -146,7 +146,7 @@ La facturière travaille dans le logiciel de facturation et de télétransmissio
 | B9 | Suivre les retours NOEMIE et pointer | Écarts |
 | B10 | Traiter un rejet | Droits, administratif, cotation |
 | B11 | Relancer un paiement | |
-| B12 | Faire la clôture | À préciser |
+| B12 | Faire la clôture | Toutes les feuilles de soins de la période saisies et contrôlées avant de figer |
 | B13 | Facturer pendant un remplacement | Qui facture pour qui |
 | B14 | Gérer un contrôle ou contentieux CPAM | Traçabilité |
 | B15 | Reporting à la cliente | Fréquence |

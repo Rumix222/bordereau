@@ -10,6 +10,23 @@ function computeState(roadmap, done) {
   return { verrous, porteOuverte, all, next };
 }
 
+// Sauvegarde/restauration par fichier : désactivée. Passer à true pour la réactiver.
+const SAUVEGARDE_ACTIVE = false;
+
+function sectionSauvegarde() {
+  return `
+      <h2>Mes données</h2>
+      <div class="card">
+        <p class="small">La progression, les scores et les essais du simulateur sont enregistrés <strong>uniquement sur ce téléphone</strong>. Faites une sauvegarde de temps en temps.</p>
+        <div class="btn-row">
+          <button class="btn small secondary" id="export">Sauvegarder (fichier)</button>
+          <label class="btn small secondary">Restaurer<input type="file" id="import" accept="application/json" hidden></label>
+        </div>
+        <p id="data-msg" class="small" role="status"></p>
+      </div>
+  `;
+}
+
 export default async function accueil(el) {
   const roadmap = await loadJSON('data/feuille-de-route.json');
   const rows = await db.all('roadmap').catch(() => []);
@@ -32,7 +49,7 @@ export default async function accueil(el) {
       </div>
       <div class="notice ${porteOuverte ? 'ok' : ''}">
         🔒 <strong>Prérequis obligatoires :</strong> ${porteOuverte
-          ? 'validés. Les phases 6 et 7 sont ouvertes.'
+          ? 'validés. Les phases 5 et 6 sont ouvertes.'
           : `${verrous.filter((e) => done.has(e.id)).length} / ${verrous.length} étapes. Aucune facturation réelle pour une cliente avant de les avoir validés (assurance RC Pro, contrats, RGPD, accès CPS).`}
       </div>
 
@@ -58,15 +75,7 @@ export default async function accueil(el) {
       }).join('')}
       <p class="small muted">${esc(roadmap.regle)}<br>${esc(roadmap.statut)}</p>
 
-      <h2>Mes données</h2>
-      <div class="card">
-        <p class="small">La progression, les scores et les essais du simulateur sont enregistrés <strong>uniquement sur ce téléphone</strong>. Faites une sauvegarde de temps en temps.</p>
-        <div class="btn-row">
-          <button class="btn small secondary" id="export">Sauvegarder (fichier)</button>
-          <label class="btn small secondary">Restaurer<input type="file" id="import" accept="application/json" hidden></label>
-        </div>
-        <p id="data-msg" class="small" role="status"></p>
-      </div>
+      ${SAUVEGARDE_ACTIVE ? sectionSauvegarde() : ''}
     `;
 
     el.querySelectorAll('input[data-step]').forEach((cb) => cb.addEventListener('change', async () => {
@@ -80,8 +89,10 @@ export default async function accueil(el) {
     el.querySelectorAll('details.phase').forEach((d) => d.addEventListener('toggle', () => {
       if (d.open) db.setSetting('openPhase', d.dataset.phase).catch(() => {});
     }));
-    el.querySelector('#export').addEventListener('click', exportData);
-    el.querySelector('#import').addEventListener('change', importData);
+    if (SAUVEGARDE_ACTIVE) {
+      el.querySelector('#export').addEventListener('click', exportData);
+      el.querySelector('#import').addEventListener('change', importData);
+    }
   }
 
   async function exportData() {

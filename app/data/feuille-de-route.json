@@ -5,98 +5,87 @@
   "phases": [
     {
       "id": "P1",
-      "titre": "Cadrer les points bloquants",
-      "fin": "Accès distant et CPS, première infirmière contact et « clôture » clarifiés.",
+      "titre": "Apprendre le métier",
+      "fin": "Quiz réussi et une séance de facturation observée.",
       "etapes": [
-        { "id": "P1-01", "texte": "Trouver une infirmière libérale qui accepte d'échanger et de la laisser observer sa facturation", "lien": "#/clientes" },
-        { "id": "P1-02", "texte": "Clarifier avec elle ce que recouvre la « clôture » (mensuelle ? télétransmission ?)", "lien": "#/metier#organisation-et-routines" },
-        { "id": "P1-03", "texte": "Comprendre comment se passe un accès distant chez elle (logiciel, CPS)", "lien": "#/societe#donnees-patients-cps-et-acces-distant" },
-        { "id": "P1-04", "texte": "Noter les réponses obtenues" }
+        { "id": "P1-01", "texte": "Lire la convention nationale des infirmiers et ses avenants récents (Ameli Pro, Légifrance)", "lien": "#/metier#la-ngap" },
+        { "id": "P1-02", "texte": "NGAP : actes principaux, cotations, conditions (AMI, AIS, DI…)", "lien": "#/metier#la-ngap" },
+        { "id": "P1-03", "texte": "NGAP : majorations, IFD, IK, règles de cumul, exceptions", "lien": "#/metier#majorations-et-deplacements" },
+        { "id": "P1-04", "texte": "BSI : fonctionnement, forfaits, points de facturation", "lien": "#/metier#le-bsi-bilan-de-soins-infirmiers" },
+        { "id": "P1-05", "texte": "Lire un dossier de soins : ordonnance, dates, durée, renouvellement", "lien": "#/metier#lire-un-dossier-de-soins" },
+        { "id": "P1-06", "texte": "Télétransmission : envoi, retours, NOEMIE, pointage", "lien": "#/metier#teletransmission-et-retours" },
+        { "id": "P1-07", "texte": "Rejets : familles de causes (droits, administratif, cotation) et corrections", "lien": "#/metier#traiter-les-rejets" },
+        { "id": "P1-08", "texte": "Risques de mauvaise facturation, indus, contentieux CPAM", "lien": "#/metier#risques-et-contentieux" },
+        { "id": "P1-09", "texte": "Routines : collecte des pièces, classement, relances, rythme (tous les 15 jours proposé)", "lien": "#/metier#organisation-et-routines" },
+        { "id": "P1-10", "texte": "Trouver une infirmière libérale qui accepte de vous laisser observer une séance de facturation", "lien": "#/clientes#trouver-les-premieres-clientes" },
+        { "id": "P1-11", "texte": "Réussir le quiz par thème (objectif proposé : 80 %)", "lien": "#/quiz" }
       ]
     },
     {
       "id": "P2",
-      "titre": "Apprendre le métier",
-      "fin": "Quiz réussi et une séance de facturation observée.",
+      "titre": "Maîtriser un logiciel",
+      "fin": "Dérouler seule un cycle complet sur cas fictifs.",
       "etapes": [
-        { "id": "P2-01", "texte": "Lire la convention nationale des infirmiers et ses avenants récents (Ameli Pro, Légifrance)", "lien": "#/metier#la-ngap" },
-        { "id": "P2-02", "texte": "NGAP : actes principaux, cotations, conditions (AMI, AIS, DI…)", "lien": "#/metier#la-ngap" },
-        { "id": "P2-03", "texte": "NGAP : majorations, IFD, IK, règles de cumul, exceptions", "lien": "#/metier#majorations-et-deplacements" },
-        { "id": "P2-04", "texte": "BSI : fonctionnement, forfaits, points de facturation", "lien": "#/metier#le-bsi-bilan-de-soins-infirmiers" },
-        { "id": "P2-05", "texte": "Lire un dossier de soins : ordonnance, dates, durée, renouvellement", "lien": "#/metier#lire-un-dossier-de-soins" },
-        { "id": "P2-06", "texte": "Télétransmission : envoi, retours, NOEMIE, pointage", "lien": "#/metier#teletransmission-et-retours" },
-        { "id": "P2-07", "texte": "Rejets : familles de causes (droits, administratif, cotation) et corrections", "lien": "#/metier#traiter-les-rejets" },
-        { "id": "P2-08", "texte": "Risques de mauvaise facturation, indus, contentieux CPAM", "lien": "#/metier#risques-et-contentieux" },
-        { "id": "P2-09", "texte": "Routines : collecte des pièces, classement, relances, rythme (tous les 15 jours proposé)", "lien": "#/metier#organisation-et-routines" },
-        { "id": "P2-10", "texte": "Observer une séance de facturation chez une IDEL" },
-        { "id": "P2-11", "texte": "Réussir le quiz par thème (objectif proposé : 80 %)", "lien": "#/quiz" }
+        { "id": "P2-01", "texte": "Lister les logiciels IDEL (dont Albus) et ceux utilisés en Jura/Doubs", "lien": "#/metier#les-logiciels" },
+        { "id": "P2-02", "texte": "Demander démos / essais et noter les conditions d'accès", "lien": "#/metier#les-logiciels" },
+        { "id": "P2-03", "texte": "Simulateur : saisir un patient fictif, une ordonnance, des soins", "lien": "#/simulateur" },
+        { "id": "P2-04", "texte": "Simulateur : coter, appliquer majorations et déplacements", "lien": "#/simulateur" },
+        { "id": "P2-05", "texte": "Simulateur : envoyer, lire un retour, traiter un rejet", "lien": "#/simulateur" },
+        { "id": "P2-06", "texte": "Choisir le ou les logiciels sur lesquels être opérationnelle", "lien": "#/metier#les-logiciels" }
       ]
     },
     {
       "id": "P3",
-      "titre": "Maîtriser un logiciel",
-      "fin": "Dérouler seule un cycle complet sur cas fictifs.",
+      "titre": "Structurer la société",
+      "fin": "Structure créée, assurée, contrats prêts.",
       "etapes": [
-        { "id": "P3-01", "texte": "Lister les logiciels IDEL (dont Albus) et ceux utilisés en Jura/Doubs", "lien": "#/metier#les-logiciels" },
-        { "id": "P3-02", "texte": "Demander démos / essais et noter les conditions d'accès", "lien": "#/metier#les-logiciels" },
-        { "id": "P3-03", "texte": "Simulateur : saisir un patient fictif, une ordonnance, des soins", "lien": "#/simulateur" },
-        { "id": "P3-04", "texte": "Simulateur : coter, appliquer majorations et déplacements", "lien": "#/simulateur" },
-        { "id": "P3-05", "texte": "Simulateur : envoyer, lire un retour, traiter un rejet", "lien": "#/simulateur" },
-        { "id": "P3-06", "texte": "Choisir le ou les logiciels sur lesquels être opérationnelle", "lien": "#/metier#les-logiciels" }
+        { "id": "P3-01", "texte": "Prendre rendez-vous CCI ou comptable et confirmer le statut (piste : micro-entreprise)", "lien": "#/societe#choisir-son-statut" },
+        { "id": "P3-02", "texte": "Vérifier plafonds, franchise de TVA, code APE, CFE", "lien": "#/societe#choisir-son-statut" },
+        { "id": "P3-03", "texte": "Créer l'activité (guichet unique)", "lien": "#/societe#checklist-de-creation" },
+        { "id": "P3-04", "texte": "Ouvrir un compte bancaire professionnel séparé", "lien": "#/societe#checklist-de-creation" },
+        { "id": "P3-05", "texte": "Souscrire une assurance RC Pro adaptée à l'activité", "verrou": true, "lien": "#/societe#responsabilite-et-assurance" },
+        { "id": "P3-06", "texte": "Rédiger CGV, contrat de prestation et mandat de facturation (avec relecture juridique)", "verrou": true, "lien": "#/societe#contrats" },
+        { "id": "P3-07", "texte": "Cadrer le RGPD : contrat de sous-traitance type, confidentialité, conservation", "verrou": true, "lien": "#/societe#donnees-patients-cps-et-acces-distant" },
+        { "id": "P3-08", "texte": "Valider avec chaque éditeur et chaque cliente le mode d'accès distant conforme (CPS non partagée)", "verrou": true, "lien": "#/societe#donnees-patients-cps-et-acces-distant" }
       ]
     },
     {
       "id": "P4",
-      "titre": "Structurer la société",
-      "fin": "Structure créée, assurée, contrats prêts.",
+      "titre": "Préparer l'offre",
+      "fin": "Une offre écrite et un processus d'intégration prêts à présenter.",
       "etapes": [
-        { "id": "P4-01", "texte": "Prendre rendez-vous CCI ou comptable et confirmer le statut (piste : micro-entreprise)", "lien": "#/societe#choisir-son-statut" },
-        { "id": "P4-02", "texte": "Vérifier plafonds, franchise de TVA, code APE, CFE", "lien": "#/societe#choisir-son-statut" },
-        { "id": "P4-03", "texte": "Créer l'activité (guichet unique)", "lien": "#/societe#checklist-de-creation" },
-        { "id": "P4-04", "texte": "Ouvrir un compte bancaire professionnel séparé", "lien": "#/societe#checklist-de-creation" },
-        { "id": "P4-05", "texte": "Souscrire une assurance RC Pro adaptée à l'activité", "verrou": true, "lien": "#/societe#responsabilite-et-assurance" },
-        { "id": "P4-06", "texte": "Rédiger CGV, contrat de prestation et mandat de facturation (avec relecture juridique)", "verrou": true, "lien": "#/societe#contrats" },
-        { "id": "P4-07", "texte": "Cadrer le RGPD : contrat de sous-traitance type, confidentialité, conservation", "verrou": true, "lien": "#/societe#donnees-patients-cps-et-acces-distant" },
-        { "id": "P4-08", "texte": "Valider avec chaque éditeur et chaque cliente le mode d'accès distant conforme (CPS non partagée)", "verrou": true, "lien": "#/societe#donnees-patients-cps-et-acces-distant" }
+        { "id": "P4-01", "texte": "Choisir le modèle de tarification (forfait, horaire, pourcentage) et un niveau de départ", "lien": "#/clientes#tarification" },
+        { "id": "P4-02", "texte": "Définir les 3 formules et les aligner avec le site", "lien": "#/clientes#tarification" },
+        { "id": "P4-03", "texte": "Décrire le processus d'intégration d'une cliente (contrat, mandat, accès, RGPD)", "lien": "#/clientes#integrer-une-nouvelle-cliente" },
+        { "id": "P4-04", "texte": "Définir le reporting envoyé à la cliente et sa fréquence", "lien": "#/clientes#integrer-une-nouvelle-cliente" },
+        { "id": "P4-05", "texte": "Définir la gestion des rejets, relances et de la résiliation", "lien": "#/clientes#integrer-une-nouvelle-cliente" }
       ]
     },
     {
       "id": "P5",
-      "titre": "Préparer l'offre",
-      "fin": "Une offre écrite et un processus d'intégration prêts à présenter.",
-      "etapes": [
-        { "id": "P5-01", "texte": "Choisir le modèle de tarification (forfait, horaire, pourcentage) et un niveau de départ", "lien": "#/clientes#tarification" },
-        { "id": "P5-02", "texte": "Définir les 3 formules et les aligner avec le site", "lien": "#/clientes#tarification" },
-        { "id": "P5-03", "texte": "Décrire le processus d'intégration d'une cliente (contrat, mandat, accès, RGPD)", "lien": "#/clientes#integrer-une-nouvelle-cliente" },
-        { "id": "P5-04", "texte": "Définir le reporting envoyé à la cliente et sa fréquence", "lien": "#/clientes#integrer-une-nouvelle-cliente" },
-        { "id": "P5-05", "texte": "Définir la gestion des rejets, relances et de la résiliation", "lien": "#/clientes#integrer-une-nouvelle-cliente" }
-      ]
-    },
-    {
-      "id": "P6",
       "titre": "Visibilité et premières clientes",
       "fin": "Au moins une cliente prête à démarrer (prérequis obligatoires validés).",
       "exigeVerrous": true,
       "etapes": [
-        { "id": "P6-01", "texte": "Site : choisir et acheter le domaine, choisir l'hébergement (OVH Starter ou o2switch), publier" },
-        { "id": "P6-02", "texte": "Google Search Console et Google Business Profile" },
-        { "id": "P6-03", "texte": "Vérifier les règles de communication applicables", "lien": "#/clientes#communication-point-de-vigilance" },
-        { "id": "P6-04", "texte": "Activer le réseau soignant : anciennes collègues, remplacements", "lien": "#/clientes#trouver-les-premieres-clientes" },
-        { "id": "P6-05", "texte": "Contacter cabinets et syndicats du Jura et du Doubs", "lien": "#/clientes#trouver-les-premieres-clientes" },
-        { "id": "P6-06", "texte": "Signer 1 à 3 clientes tests, à tarif réduit", "lien": "#/clientes#trouver-les-premieres-clientes" }
+        { "id": "P5-01", "texte": "Site : choisir et acheter le domaine, choisir l'hébergement (OVH Starter ou o2switch), publier" },
+        { "id": "P5-02", "texte": "Google Search Console et Google Business Profile" },
+        { "id": "P5-03", "texte": "Vérifier les règles de communication applicables", "lien": "#/clientes#communication-point-de-vigilance" },
+        { "id": "P5-04", "texte": "Activer le réseau soignant : anciennes collègues, remplacements", "lien": "#/clientes#trouver-les-premieres-clientes" },
+        { "id": "P5-05", "texte": "Contacter cabinets et syndicats du Jura et du Doubs", "lien": "#/clientes#trouver-les-premieres-clientes" },
+        { "id": "P5-06", "texte": "Signer 1 à 3 clientes tests, à tarif réduit", "lien": "#/clientes#trouver-les-premieres-clientes" }
       ]
     },
     {
-      "id": "P7",
+      "id": "P6",
       "titre": "Démarrer et rôder",
       "exigeVerrous": true,
       "etapes": [
-        { "id": "P7-01", "texte": "Démarrer avec peu de cabinets et sécuriser les procédures (contrôle des ordonnances, règles de cumul, relances)" },
-        { "id": "P7-02", "texte": "Tenir un journal des rejets et des erreurs : cause, correction, règle apprise", "lien": "#/metier#traiter-les-rejets" },
-        { "id": "P7-03", "texte": "Recueillir les retours des clientes" },
-        { "id": "P7-04", "texte": "Ajuster offre, tarifs et procédures", "lien": "#/clientes#tarification" },
-        { "id": "P7-05", "texte": "Élargir progressivement sans dégrader la qualité ni la confidentialité" },
-        { "id": "P7-06", "texte": "Décider ensuite d'un éventuel passage en société ou d'une extension (autres professions)", "lien": "#/societe#choisir-son-statut" }
+        { "id": "P6-01", "texte": "Démarrer avec peu de cabinets et sécuriser les procédures (contrôle des ordonnances, règles de cumul, relances)" },
+        { "id": "P6-02", "texte": "Tenir un journal des rejets et des erreurs : cause, correction, règle apprise", "lien": "#/metier#traiter-les-rejets" },
+        { "id": "P6-03", "texte": "Recueillir les retours des clientes" },
+        { "id": "P6-04", "texte": "Ajuster offre, tarifs et procédures", "lien": "#/clientes#tarification" },
+        { "id": "P6-05", "texte": "Élargir progressivement sans dégrader la qualité ni la confidentialité" },
+        { "id": "P6-06", "texte": "Décider ensuite d'un éventuel passage en société ou d'une extension (autres professions)", "lien": "#/societe#choisir-son-statut" }
       ]
     }
   ]

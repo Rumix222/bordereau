@@ -24,6 +24,6 @@ Après une modification du **code** (HTML/CSS/JS), incrémenter `VERSION` dans `
 | `js/db.js` | Base de données locale (IndexedDB) et ses migrations |
 
 ## Données
-Tout est stocké **sur l'appareil** (IndexedDB) : feuille de route, réponses au quiz, essais du simulateur. Rien n'est envoyé sur un serveur. Sauvegarde et restauration par fichier depuis l'accueil. **Aucune donnée patient réelle** : les cas sont fictifs.
+Tout est stocké **sur l'appareil** (IndexedDB) : feuille de route, réponses au quiz, essais du simulateur. Rien n'est envoyé sur un serveur. La sauvegarde et la restauration par fichier existent dans le code mais sont désactivées (`SAUVEGARDE_ACTIVE` dans `js/pages/accueil.js`). **Aucune donnée patient réelle** : les cas sont fictifs.
 
 Pour faire évoluer la base : incrémenter `DB_VERSION` dans `js/db.js` et ajouter une étape dans `MIGRATIONS`.
