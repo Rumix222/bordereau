@@ -1,0 +1,4 @@
+# Sauvegardes exportées depuis l'application (données personnelles de progression)
+bordereau-sauvegarde-*.json
+Thumbs.db
+.DS_Store

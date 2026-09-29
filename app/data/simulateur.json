@@ -1,0 +1,134 @@
+{
+  "version": "2026-09-29",
+  "nom": "SimuSoins",
+  "avertissement": "Maquette pédagogique générique : elle ne reproduit l'interface d'aucun logiciel commercial. Catalogue d'actes simplifié et non opposable, cotations [à vérifier] sur la NGAP en vigueur. Tous les patients et praticiens sont fictifs.",
+  "source": "NGAP (Ameli), catalogue pédagogique Bordereau",
+  "verifie": null,
+  "actes": [
+    { "id": "INJ", "libelle": "Injection intramusculaire ou sous-cutanée", "lettre": "AMI", "coef": 1 },
+    { "id": "PSV", "libelle": "Prélèvement sanguin veineux", "lettre": "AMI", "coef": 1.5 },
+    { "id": "PANS", "libelle": "Pansement courant", "lettre": "AMI", "coef": 2 },
+    { "id": "PLC", "libelle": "Pansement lourd et complexe", "lettre": "AMI", "coef": 4 }
+  ],
+  "majorations": [
+    { "id": "IFD", "libelle": "IFD — indemnité forfaitaire de déplacement (domicile)" },
+    { "id": "MAU", "libelle": "MAU — majoration pour acte unique" },
+    { "id": "MIE", "libelle": "MIE — majoration jeune enfant (moins de 7 ans)" },
+    { "id": "MCI", "libelle": "MCI — majoration de coordination infirmière" },
+    { "id": "F", "libelle": "F — dimanche ou jour férié" },
+    { "id": "NUIT", "libelle": "Nuit — 20 h-23 h ou 5 h-8 h (soin prescrit la nuit)" },
+    { "id": "NUITP", "libelle": "Nuit profonde — 23 h-5 h (soin prescrit la nuit)" }
+  ],
+  "cas": [
+    {
+      "id": "C01",
+      "titre": "Une injection à domicile",
+      "niveau": 1,
+      "themes": ["ngap", "majorations"],
+      "patient": { "nom": "TEST Alice", "naissance": "1948-03-12", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-03-31", "ald": false, "complementaire": "Mutuelle fictive A" },
+      "ordonnance": { "date": "2026-09-25", "prescripteur": "Dr FICTIF Paul", "contenu": "Injection sous-cutanée d'anticoagulant une fois par jour, à domicile, pendant 10 jours.", "debut": "2026-09-26", "fin": "2026-10-05" },
+      "seance": { "date": "2026-09-29", "heure": "09:30", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Une injection sous-cutanée. Aucun autre soin." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "INJ", "taux": 100 }], "majorations": ["IFD", "MAU"], "ik": false },
+      "correction": "Un seul acte à AMI 1 réalisé au domicile : AMI 1 à taux plein, IFD pour le déplacement à domicile, et MAU car c'est un acte unique de faible coefficient. Pas d'IK : même commune. [à vérifier : conditions de la MAU]"
+    },
+    {
+      "id": "C02",
+      "titre": "Une prise de sang au cabinet",
+      "niveau": 1,
+      "themes": ["ngap", "majorations"],
+      "patient": { "nom": "TEST Bernard", "naissance": "1971-06-02", "caisse": "CPAM fictive du Doubs", "droitsJusquau": "2027-01-31", "ald": false, "complementaire": "Mutuelle fictive B" },
+      "ordonnance": { "date": "2026-09-24", "prescripteur": "Dr FICTIVE Claire", "contenu": "Bilan sanguin à jeun (NFS, glycémie).", "debut": "2026-09-24", "fin": "2026-10-24" },
+      "seance": { "date": "2026-09-29", "heure": "08:30", "lieu": "Cabinet", "deplacement": "Aucun (le patient vient au cabinet)", "soins": "Un prélèvement sanguin veineux." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PSV", "taux": 100 }], "majorations": ["MAU"], "ik": false },
+      "correction": "Prélèvement sanguin veineux : AMI 1,5 à taux plein. Pas d'IFD ni d'IK : le soin a lieu au cabinet. MAU : acte unique de faible coefficient. [à vérifier : conditions de la MAU]"
+    },
+    {
+      "id": "C03",
+      "titre": "Deux actes dans la même séance",
+      "niveau": 2,
+      "themes": ["ngap", "cumul"],
+      "patient": { "nom": "TEST Chantal", "naissance": "1939-11-20", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-06-30", "ald": true, "complementaire": "—" },
+      "ordonnance": { "date": "2026-09-22", "prescripteur": "Dr FICTIF Paul", "contenu": "Prise de sang hebdomadaire (INR) et injection intramusculaire de vitamine B12 le même jour, à domicile.", "debut": "2026-09-22", "fin": "2026-12-22" },
+      "seance": { "date": "2026-09-29", "heure": "10:45", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Un prélèvement sanguin veineux puis une injection intramusculaire, au cours du même passage." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PSV", "taux": 100 }, { "id": "INJ", "taux": 50 }], "majorations": ["IFD"], "ik": false },
+      "correction": "Règle de cumul (article 11B) : l'acte au coefficient le plus élevé (prélèvement, AMI 1,5) à taux plein, le second (injection, AMI 1) à 50 %. Pas de MAU : il y a deux actes. IFD pour le domicile. [à vérifier : absence de dérogation pour ce couple d'actes]"
+    },
+    {
+      "id": "C04",
+      "titre": "Un pansement un dimanche",
+      "niveau": 2,
+      "themes": ["ngap", "majorations"],
+      "patient": { "nom": "TEST Denis", "naissance": "1956-01-08", "caisse": "CPAM fictive du Doubs", "droitsJusquau": "2027-02-28", "ald": false, "complementaire": "Mutuelle fictive C" },
+      "ordonnance": { "date": "2026-09-21", "prescripteur": "Dr FICTIVE Claire", "contenu": "Pansement de plaie post-opératoire tous les jours, y compris dimanche et jours fériés, pendant 15 jours.", "debut": "2026-09-21", "fin": "2026-10-05" },
+      "seance": { "date": "2026-09-27", "heure": "11:00", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Un pansement courant." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PANS", "taux": 100 }], "majorations": ["IFD", "F"], "ik": false },
+      "correction": "Le 27/09/2026 est un dimanche et l'ordonnance prévoit les soins le dimanche : majoration F. Pansement courant AMI 2 à taux plein, IFD pour le domicile. Pas de MAU : le coefficient (2) n'est pas un « faible coefficient ». [à vérifier]"
+    },
+    {
+      "id": "C05",
+      "titre": "Un jeune enfant au cabinet",
+      "niveau": 2,
+      "themes": ["ngap", "majorations"],
+      "patient": { "nom": "TEST Emma", "naissance": "2021-05-14", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-05-31", "ald": false, "complementaire": "Mutuelle fictive A" },
+      "ordonnance": { "date": "2026-09-26", "prescripteur": "Dr FICTIF Paul", "contenu": "Pansement de plaie du genou tous les deux jours pendant 8 jours.", "debut": "2026-09-26", "fin": "2026-10-03" },
+      "seance": { "date": "2026-09-28", "heure": "17:30", "lieu": "Cabinet", "deplacement": "Aucun", "soins": "Un pansement courant." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PANS", "taux": 100 }], "majorations": ["MIE"], "ik": false },
+      "correction": "Emma a 5 ans : majoration MIE (moins de 7 ans). Pansement courant AMI 2. Au cabinet : ni IFD, ni IK. [à vérifier : conditions de la MIE]"
+    },
+    {
+      "id": "C06",
+      "titre": "Des droits qui posent question",
+      "niveau": 2,
+      "themes": ["rejets", "droits"],
+      "patient": { "nom": "TEST François", "naissance": "1962-09-03", "caisse": "CPAM fictive du Doubs", "droitsJusquau": "2026-08-31", "ald": false, "complementaire": "Mutuelle fictive B" },
+      "ordonnance": { "date": "2026-09-23", "prescripteur": "Dr FICTIVE Claire", "contenu": "Injection intramusculaire, une par semaine pendant 4 semaines, à domicile.", "debut": "2026-09-23", "fin": "2026-10-21" },
+      "seance": { "date": "2026-09-29", "heure": "14:00", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Une injection intramusculaire." },
+      "attendu": { "droitsOk": false, "ordonnanceOk": true, "actes": [{ "id": "INJ", "taux": 100 }], "majorations": ["IFD", "MAU"], "ik": false },
+      "correction": "Les droits affichés se terminent le 31/08/2026, avant la date du soin. Envoyer la facture ainsi expose à un rejet « droits ». Bon réflexe : mettre la facture en attente, demander au patient (via l'infirmière) une attestation de droits à jour ou la mise à jour de sa carte Vitale, puis facturer. La cotation, elle, serait : AMI 1 + IFD + MAU."
+    },
+    {
+      "id": "C07",
+      "titre": "Une ordonnance à contrôler",
+      "niveau": 2,
+      "themes": ["rejets", "ordonnance"],
+      "patient": { "nom": "TEST Gisèle", "naissance": "1944-02-17", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-04-30", "ald": true, "complementaire": "—" },
+      "ordonnance": { "date": "2026-09-08", "prescripteur": "Dr FICTIF Paul", "contenu": "Pansement d'ulcère de jambe tous les jours pendant 10 jours.", "debut": "2026-09-09", "fin": "2026-09-18" },
+      "seance": { "date": "2026-09-29", "heure": "09:00", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Un pansement courant (la plaie n'est pas encore cicatrisée)." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": false, "actes": [{ "id": "PANS", "taux": 100 }], "majorations": ["IFD"], "ik": false },
+      "correction": "L'ordonnance couvrait les soins du 09/09 au 18/09/2026. Le soin du 29/09 n'est plus couvert : risque de rejet administratif, voire d'indu. Bon réflexe : mettre en attente et signaler à l'infirmière qu'un renouvellement d'ordonnance est nécessaire. La cotation, elle, serait : AMI 2 + IFD."
+    },
+    {
+      "id": "C08",
+      "titre": "Un pansement lourd en soins palliatifs",
+      "niveau": 3,
+      "themes": ["ngap", "majorations"],
+      "patient": { "nom": "TEST Henri", "naissance": "1937-07-29", "caisse": "CPAM fictive du Doubs", "droitsJusquau": "2027-07-31", "ald": true, "complementaire": "—" },
+      "ordonnance": { "date": "2026-09-25", "prescripteur": "Dr FICTIVE Claire", "contenu": "Soins palliatifs à domicile. Pansement lourd et complexe d'escarre sacrée, tous les jours pendant un mois.", "debut": "2026-09-25", "fin": "2026-10-24" },
+      "seance": { "date": "2026-09-29", "heure": "11:30", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Un pansement lourd et complexe." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PLC", "taux": 100 }], "majorations": ["IFD", "MCI"], "ik": false },
+      "correction": "Pansement lourd et complexe : AMI 4. Majoration MCI (coordination infirmière) : soins palliatifs à domicile et pansement lourd. IFD pour le domicile. [à vérifier : conditions de la MCI]"
+    },
+    {
+      "id": "C09",
+      "titre": "Un soin prescrit le soir",
+      "niveau": 3,
+      "themes": ["majorations"],
+      "patient": { "nom": "TEST Inès", "naissance": "1983-12-01", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-01-31", "ald": false, "complementaire": "Mutuelle fictive C" },
+      "ordonnance": { "date": "2026-09-28", "prescripteur": "Dr FICTIF Paul", "contenu": "Injection intramusculaire d'antibiotique à 21 h, à domicile, pendant 3 jours. Horaire impératif.", "debut": "2026-09-28", "fin": "2026-09-30" },
+      "seance": { "date": "2026-09-29", "heure": "21:00", "lieu": "Domicile", "deplacement": "Même commune que le cabinet", "soins": "Une injection intramusculaire." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "INJ", "taux": 100 }], "majorations": ["IFD", "MAU", "NUIT"], "ik": false },
+      "correction": "Le soin est prescrit à 21 h avec un horaire impératif : majoration de nuit (tranche 20 h-23 h). Injection AMI 1, IFD, MAU (acte unique). Sans prescription de l'horaire, la majoration de nuit ne serait pas due. [à vérifier : conditions et cumul des majorations de nuit avec la MAU]"
+    },
+    {
+      "id": "C10",
+      "titre": "Un domicile à la campagne",
+      "niveau": 3,
+      "themes": ["majorations", "deplacements"],
+      "patient": { "nom": "TEST Jules", "naissance": "1950-04-22", "caisse": "CPAM fictive du Jura", "droitsJusquau": "2027-02-28", "ald": false, "complementaire": "Mutuelle fictive A" },
+      "ordonnance": { "date": "2026-09-27", "prescripteur": "Dr FICTIVE Claire", "contenu": "Prise de sang à domicile.", "debut": "2026-09-27", "fin": "2026-10-27" },
+      "seance": { "date": "2026-09-30", "heure": "08:15", "lieu": "Domicile", "deplacement": "Hameau isolé à 12 km du cabinet, hors agglomération", "soins": "Un prélèvement sanguin veineux." },
+      "attendu": { "droitsOk": true, "ordonnanceOk": true, "actes": [{ "id": "PSV", "taux": 100 }], "majorations": ["IFD", "MAU"], "ik": true },
+      "correction": "Prélèvement AMI 1,5 à domicile : IFD et MAU. Le domicile est hors agglomération à 12 km : des IK sont dues, calculées selon des règles d'abattement propres à la NGAP. [à vérifier : calcul des IK et abattements]"
+    }
+  ]
+}
