@@ -1,6 +1,6 @@
 # Ma société
 
-> Contenu d'orientation, à valider auprès de la CCI ou d'un comptable. Ce n'est pas un conseil juridique. Source : dossier de cadrage (`docs/01`, `docs/05`), 29/09/2026.
+> Contenu d'orientation, à valider auprès de la CCI ou d'un comptable. Ce n'est pas un conseil juridique.
 
 ## Choisir son statut
 
@@ -62,7 +62,7 @@ Trois documents à préparer, idéalement relus par un juriste :
 - La carte CPS est **strictement personnelle** : elle ne se partage pas
 - Définir avec chaque cliente un mode de travail conforme
 - Vérifier les conditions d'utilisation de chaque éditeur (accès tiers, identifiants)
-- Question ouverte n°1 du dossier : à clarifier avec une infirmière et les éditeurs
+- À clarifier avec une infirmière et les éditeurs
 
 🔒 Étapes de la porte de sécurité.
 

@@ -1,17 +1,17 @@
 {
   "version": "2026-09-29",
-  "statut": "Première version à relire (docs/08-feuille-de-route.md)",
+  "statut": "Version du 29/09/2026",
   "regle": "Les phases 1, 2 et 3 peuvent avancer en parallèle, mais aucune facturation réelle pour une cliente avant d'avoir franchi la porte de sécurité (étapes 🔒).",
   "phases": [
     {
       "id": "P1",
       "titre": "Cadrer les points bloquants",
-      "fin": "Questions ouvertes n°1, 5 et 8 traitées.",
+      "fin": "Accès distant et CPS, première infirmière contact et « clôture » clarifiés.",
       "etapes": [
         { "id": "P1-01", "texte": "Trouver une infirmière libérale qui accepte d'échanger et de la laisser observer sa facturation", "lien": "#/clientes" },
         { "id": "P1-02", "texte": "Clarifier avec elle ce que recouvre la « clôture » (mensuelle ? télétransmission ?)", "lien": "#/metier#organisation-et-routines" },
         { "id": "P1-03", "texte": "Comprendre comment se passe un accès distant chez elle (logiciel, CPS)", "lien": "#/societe#donnees-patients-cps-et-acces-distant" },
-        { "id": "P1-04", "texte": "Noter les réponses dans les décisions et les questions ouvertes du dossier" }
+        { "id": "P1-04", "texte": "Noter les réponses obtenues" }
       ]
     },
     {

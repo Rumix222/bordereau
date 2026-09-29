@@ -1,6 +1,6 @@
 # Trouver des clientes
 
-> Cette page informe et guide : l'application ne stocke **aucun fichier clients** (décision actée). Source : dossier de cadrage (`docs/04`), 29/09/2026.
+> Cette page informe et guide : l'application ne stocke **aucun fichier clients** (décision actée).
 
 ## Trouver les premières clientes
 
@@ -21,7 +21,7 @@ Un travail de qualité fidélise et déclenche les recommandations entre collèg
 
 ## Communication : point de vigilance
 
-La communication des infirmières libérales est très encadrée (pas de tracts, pas de logos fantaisie, pas de témoignages de patients affichés…). Ces règles visent les infirmières : **savoir si elles s'appliquent à une facturière indépendante reste à vérifier** (question ouverte n°9). En attendant, rester sobre et factuel.
+La communication des infirmières libérales est très encadrée (pas de tracts, pas de logos fantaisie, pas de témoignages de patients affichés…). Ces règles visent les infirmières : **savoir si elles s'appliquent à une facturière indépendante reste à vérifier**. En attendant, rester sobre et factuel.
 
 ## Tarification
 

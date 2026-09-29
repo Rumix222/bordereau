@@ -1,6 +1,6 @@
 # Le métier
 
-> Les règles de facturation évoluent (avenants à la convention, mises à jour de la NGAP). Tout ce qui est marqué **[à vérifier]** doit être confirmé sur Ameli Pro ou Légifrance avant d'être appliqué pour une vraie cliente. Source : dossier de cadrage (`docs/02`, `docs/06`), 29/09/2026.
+> Les règles de facturation évoluent (avenants à la convention, mises à jour de la NGAP). Tout ce qui est marqué **[à vérifier]** doit être confirmé sur Ameli Pro ou Légifrance avant d'être appliqué pour une vraie cliente.
 
 ## Le métier de facturière
 
@@ -120,7 +120,7 @@ Trois grandes familles de causes :
 - **Collecte des pièces** : ordonnances, attestations, bilans BSI
 - **Classement** et suivi des paiements, **relances**
 - **Rythme** : facturer tous les 15 jours est conseillé aux IDEL pour lisser leurs revenus sans être débordé ; certains logiciels permettent d'anticiper des facturations
-- **Clôture** : ce que recouvre ce terme reste à préciser avec une infirmière (clôture mensuelle ? de télétransmission ?) — question ouverte n°8
+- **Clôture** : ce que recouvre ce terme reste à préciser avec une infirmière (clôture mensuelle ? de télétransmission ?)
 
 ## Les logiciels
 
